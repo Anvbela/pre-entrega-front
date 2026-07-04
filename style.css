@@ -1,0 +1,277 @@
+.introduccion{
+
+background-color: #963747;
+padding: 10px;
+overflow: hidden;
+white-space: nowrap;
+
+}
+
+.titulo{
+
+    display: inline-block;
+
+    color: white;
+
+    animation: mover 15s linear infinite;
+}
+
+@keyframes mover{
+
+    from{
+
+        transform: translateX(-100%);
+
+    }
+
+    to{
+
+        transform: translateX(100vw);
+
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+/* ============================================================
+   HEADER Y NAVEGACIÓN
+   Barra superior fija con logo y menú
+   ============================================================ */
+
+.header{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 70px;
+    background-color: #fcefe1;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo{
+    width: 90px;
+    height: auto;
+}
+
+/* Lista de navegación horizontal */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar li{
+    list-style: none;
+    padding: 0 25px;
+}
+
+.navbar a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #8b0017;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover{
+    color: #583e1f;
+}
+
+.banner{
+
+    background-image: url("img/banner.jpg");
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/*FOOTER*/
+
+footer{
+    background-color:wheat;
+    padding: 50px 8%;
+}
+
+/*CONTENEDOR FOOTER*/
+
+.section-p1{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+
+}
+
+/*COLUMNAS FOOTER*/
+
+.columna{
+    width: 250px;
+}
+
+.columna h3{
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: rgb(102, 53, 53);
+
+}
+
+.columna p{
+    font-size: 16px;
+    line-height: 1.6;
+    color: #2e0a0a;
+
+}
+
+/*MAPA IFRAME*/
+
+.mapa iframe{
+    width: 350px;
+    height: 220px;
+    border: none;
+
+}
+
+/*LINEAS DIVISORIAS FOOTER*/
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px #420611;
+    font-size: 17px;
+    color: rgb(61, 3, 3);
+}
+
+/*EFECTOS*/
+
+.columna{
+    transition: .3s;
+
+}
+
+.columna:hover{
+    transform: translateY(-5px);
+}
+
+/*RESPONSIVE DEL FOOTER*/
+@media (max-width: 992px){
+.section-p1{
+    justify-content: center;
+    text-align: center;
+}    
+.mapa iframe{
+    width: 100%;
+    max-width: 400px;
+}
+}
+
+@media (max-width: 768px){
+    footer{
+        padding: 40px 25px;
+    
+    }
+
+    .section-p1{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .columna{
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/*SECCION PRODUCTOS*/
+
+.productos-gral{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    width: 100%;
+    margin: 60px auto;
+}
+
+.productos{
+    text-align: center;
+}
+
+.productos img{
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+}
+
+.productos p{
+    color: #000000;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.productos button{
+    background-color: #d8b08c;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/*SECCION RESEÑAS*/
+
+.contenedor-reseñas{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:15px;
+}
+
+.reseñas {
+    background-color: #1f0409; 
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+}
+
+.reseñas h3 {
+    margin-bottom: 15px;
+
+}
+
+.reseñas div {
+    background-color: rgba(104, 19, 19, 0.589);
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.reseñas img{
+    width: 50px;        
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
