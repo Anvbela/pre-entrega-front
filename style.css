@@ -114,6 +114,63 @@ html {
     padding: 10px;
 }
 
+/*SECCION DE RESEÑAS*/
+
+.reseñas{
+    padding: 40px;
+    text-align: center;
+}
+
+/*titulo de reseñas*/
+
+.reseñas h2{
+    margin-bottom: 30px;
+    letter-spacing: 4px;
+    
+}
+
+/*diseño de cartas*/
+.reseñas{
+    background-color: #fff;
+    color: #000;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: left;
+}
+
+/*usuario y reseña*/
+.usuario{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+/*perfil*/
+.usuario img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/*nombre y estrellas*/
+.usuario div{
+    display: flex;
+    flex-direction: column;
+}
+
+/*comentario de reseña*/
+.reseñas p{
+    margin: 0;
+}
+
+
+
+
 /*FOOTER*/
 
 footer{
@@ -250,43 +307,6 @@ footer{
     transition: 0.3s;
 }
 
-/*SECCION RESEÑAS*/
-
-.contenedor-reseñas{
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:15px;
-}
-
-.reseñas {
-    background-color: #1f0409; 
-    padding: 20px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: normal;
-}
-
-.reseñas h3 {
-    margin-bottom: 15px;
-
-}
-
-.reseñas div {
-    background-color: rgba(104, 19, 19, 0.589);
-    padding: 10px 15px;
-    border-radius: 10px;
-    margin: 5px;
-}
-
-.reseñas img{
-    width: 50px;        
-    height: 50px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 5px;
-}
 
 /*RESPONSIVE GENERAL*/
 
