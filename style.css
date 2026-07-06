@@ -66,19 +66,19 @@ html {
 
 /* Lista de navegación horizontal */
 .navbar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: flex;
 }
 
 .navbar li{
-    list-style: none;
-    padding: 0 25px;
+    list-style-type: none;
+    padding: 20 40px;
 }
 
 .navbar a{
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     color: hsl(350, 100%, 27%);
     transition: 0.3s ease;
