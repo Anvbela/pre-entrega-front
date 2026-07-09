@@ -1,35 +1,4 @@
-.introduccion{
-
-background-color: #963747;
-padding: 10px;
-overflow: hidden;
-white-space: nowrap;
-
-}
-
-.titulo{
-
-    display: inline-block;
-
-    color: white;
-
-    animation: mover 15s linear infinite;
-}
-
-@keyframes mover{
-
-    from{
-
-        transform: translateX(-100%);
-
-    }
-
-    to{
-
-        transform: translateX(100vw);
-
-    }
-}
+/* GENERAL*/
 
 * {
     margin: 0;
@@ -41,48 +10,39 @@ white-space: nowrap;
 html {
     scroll-behavior: smooth;
 }
-/* ============================================================
-   HEADER Y NAVEGACIÓN
-   Barra superior fija con logo y menú
-   ============================================================ */
 
-.header{
+/*HEADER Y NAVEGACION*/
+.header {
 
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 12px 70px;
     background-color: rgba(243, 222, 182, 0.932);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
     z-index: 999;
 }
 
-/* Botón hamburguesa - oculto en desktop, visible en mobile */
-.mobile{
-    display: none;
-    align-items: center;
-}
-
-.logo{
+.logo {
     width: 80px;
     height: auto;
 }
 
 /* Lista de navegación horizontal */
-.navbar{
+.navbar {
     display: inline-flex;
     align-items: flex-end;
-    justify-content: flex;
+    justify-content: flex-start;
 }
 
-.navbar li{
+.navbar li {
     list-style-type: none;
-    padding: 20 40px;
+    padding: 20px 40px;
 }
 
-.navbar a{
+.navbar a {
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
@@ -90,17 +50,64 @@ html {
     transition: 0.3s ease;
 }
 
-.navbar a:hover{
+.navbar a:hover {
     color: #583e1f;
 }
 
-/* Botón hamburguesa - oculto en desktop, visible en mobile */
-.mobile {
+/*BOTÓN HAMBURGUESA*/
+.hamburguesa {
     display: none;
-    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
-.banner{
+.hamburguesa span {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+}
+
+/*INTRODUCCION*/
+
+.introduccion {
+
+    background-color: #963747;
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.titulo {
+
+    display: inline-block;
+
+    color: white;
+
+    animation: mover 15s linear infinite;
+}
+
+@keyframes mover {
+
+    from {
+
+        transform: translateX(-100%);
+
+    }
+
+    to {
+
+        transform: translateX(100vw);
+
+    }
+}
+
+/*BANNER*/
+
+.banner {
 
     background-image: url("img/banner.jpg");
     height: 100vh;
@@ -108,31 +115,10 @@ html {
     background-position: center;
 }
 
-@media (max-widht:768px){
-    .navbar{
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .nav{
-        display: none;
-    }
-}
-
-.navbar li{
-    width: 100%;
-    text-align: center;
-}
-
-.navbar a{
-    display: block;
-    padding: 10px;
-}
 
 
 /*SECCION DE RESEÑAS*/
-.reseñas{
+.reseñas {
     background-color: #420611ee;
     background-size: 100vh;
     color: hsl(46, 93%, 89%);
@@ -144,17 +130,17 @@ html {
 
 
 /*titulo de reseñas*/
-.reseñas h2{
+.reseñas h2 {
     color: #ffce85;
     text-align: center;
     margin-bottom: 30px;
     letter-spacing: 25px;
-    
+
 }
 
 
 /*diseño de cartas*/
-.contenedor-reseñas{
+.contenedor-reseñas {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -164,7 +150,7 @@ html {
 }
 
 /*usuario y reseña*/
-.usuario{
+.usuario {
     flex: 2;
     display: flex;
     flex-direction: column;
@@ -173,40 +159,152 @@ html {
 }
 
 /*perfil*/
-.usuario img{
+.usuario img {
     width: 50px;
     height: 50px;
     border-radius: 70%;
-    object-fit:cover;
+    object-fit: cover;
     gap: 4px;
 }
 
 /*nombre y estrellas*/
-.usuario div{
+.usuario div {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
 /*comentario de reseña*/
-.reseñas p{
+.reseñas p {
     margin: 0;
     font-size: 1rem;
     line-height: 1;
 }
 
 
+/*SECCION PRODUCTOS*/
+
+.productos-gral {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    width: 100%;
+    margin: 60px auto;
+}
+
+.productos {
+    text-align: center;
+}
+
+.productos img {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+}
+
+.productos p {
+    color: black;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.productos button {
+    background-color: #d8b08c;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/*REGISTRO*/
+.registro {
+    text-align:left;
+    background-image: url(img/Registro-fondo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: safe;
+    align-items: flex-start;
+}
+.formulario-registro{
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    padding: 150px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.registro-contenedor{
+    width: 90%;
+    max-width: 450px;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/*CARRITO*/
+
+.carrito {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 40px;
+}
+
+.carrito h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contnedor-carrito {
+    background-color: #420611;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.carrito-vacio {
+    text-align: center;
+    font-size: 18px;
+
+}
+
+.resumen-carrito {
+    margin-top: 30px;
+    background-color: #fcd294;
+    color: rgb(65, 1, 1);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.btn-comprar {
+    margin-top: 20px;
+    background-color: #fdbb57;
+    color: rgb(65, 1, 1);
+    padding: 15px 35px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
 /*FOOTER*/
 
-footer{
-    background-color:wheat;
+footer {
+    background-color: wheat;
     padding: 80px 8%;
     border-top-left-radius: 4vh;
 }
 
 /*CONTENEDOR FOOTER*/
 
-.section-p1{
+.section-p1 {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -217,18 +315,29 @@ footer{
 
 /*COLUMNAS FOOTER*/
 
-.columna{
+.columna {
     width: 250px;
 }
 
-.columna h3{
+/*EFECTOS*/
+
+.columna {
+    transition: .3s;
+
+}
+
+.columna:hover {
+    transform: translateY(5px);
+}
+
+.columna h3 {
     font-size: 16px;
     margin-bottom: 15px;
     color: rgb(102, 53, 53);
 
 }
 
-.columna p{
+.columna p {
     font-size: 16px;
     line-height: 1.6;
     color: #2e0a0a;
@@ -237,7 +346,7 @@ footer{
 
 /*MAPA IFRAME*/
 
-.mapa iframe{
+.mapa iframe {
     width: 350px;
     height: 220px;
     border: none;
@@ -246,108 +355,105 @@ footer{
 
 /*LINEAS DIVISORIAS FOOTER*/
 
-.copyright{
+.copyright {
     width: 100%;
     text-align: center;
     margin-top: 20px;
     padding-top: 20px;
-    border-top: 1px #420611;
+    border-top: 1px solid #420611;
     font-size: 17px;
     color: rgb(61, 3, 3);
 }
 
-/*EFECTOS*/
-
-.columna{
-    transition: .3s;
-
-}
-
-.columna:hover{
-    translate: translate-Y(50px);
-}
-
-/*RESPONSIVE DEL FOOTER*/
-@media (max-width: 992px){
-.section-p1{
-    justify-content: center;
-    text-align: center;
-}    
-.mapa iframe{
-    width: 100%;
-    max-width: 400px;
-}
-}
-
-@media (max-width: 768px){
-    footer{
-        padding: 40px 25px;
-    
+@media (max-width:768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
     }
 
-    .section-p1{
+    .nav {
+        display: none;
+    }
+
+    .navbar li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 10px;
+    }
+
+    .productos-gral {
+        flex-direction: column;
+        align-items: auto;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .hamburguesa {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: white;
+        width: 200px;
+        padding: 20px;
+    }
+
+    .menu.activo {
+        display: flex;
+    }
+
+}
+
+/*RESPONSIVE 768px*/
+
+@media (max-width: 768px) {
+    footer {
+        padding: 40px 25px;
+
+    }
+
+    .section-p1 {
         flex-direction: column;
         align-items: center;
         gap: 30px;
     }
 
-    .columna{
+    .columna {
         width: 100%;
         max-width: 400px;
     }
 }
 
-/*SECCION PRODUCTOS*/
+/*RESPONSIVE 992px*/
 
-.productos-gral{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 30px;
-    width: 100%;
-    margin: 60px auto;
-}
+@media (max-width: 992px) {
+    .section-p1 {
+        justify-content: center;
+        text-align: center;
+    }
 
-.productos{
-    text-align: center;
-}
+    .mapa iframe {
+        width: 100%;
+        max-width: 400px;
+    }
 
-.productos img{
-    width: 300px;
-    height: auto;
-    object-fit: contain;
-}
-
-.productos p{
-    color: black;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-.productos button{
-    background-color: #d8b08c;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
+    .productos-gral {}
 }
 
 
+/*RESPONSIVE 1024px*/
 
-/*Computadoras*/
-@media(min-width:1024px){
-    .productos{
+@media(min-width:1024px) {
+    .productos {
         grid-template-columns: repeat(4, 1fr);
     }
 }
-
-/*Tablet*/
-@media (min-wdth: 768px){
-    .productos{
-        grid-template-columns:  repeat(2, 1fr);
-    }
-}
-
-
-

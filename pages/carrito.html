@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/x-icon" href="../img/AnimurA.ico.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>AnimurA | Iniciar Sesión</title>
+
+    <title>Carrito | AnimurA</title>
 
 </head>
 
@@ -26,7 +27,7 @@
         <nav class="nav">
             <ul class="navbar">
                 <li><a href="../pages/Productos.html">❀Productos</a></li>
-                <li><a href="../https://www.instagram.com/animura.store/" target="_blank">❀Contactanos</a></li>
+                <li><a href="https://www.instagram.com/animura.store/" target="_blank">❀Contactanos</a></li>
                 <li><a href="../pages/Registrate.html">❀Inicia Sesión</a></li>
                 <li><a href="../pages/carrito.html">
                         <i class="fa-solid fa-bag-shopping"></i>
@@ -35,44 +36,55 @@
             </ul>
         </nav>
 
+
     </header>
 
     <main>
 
-        <!--Apartado de registro para Inicio de sesión-->
 
         <section class="introduccion">
-            <h1 class="titulo">Registrate como último paso para finalizar tu compra. </h1>
+
+            <h1 class="titulo">
+                CARRITO DE COMPRAS
+            </h1>
+
         </section>
 
-        <section class="registro">
-            <div class="formulario-registro">
-                <h2>¡Registrate!</h2>
-                <form action="https://formspree.io/f/TU_ID" method="POST">
+        <section class="carrito">
 
-                    <label>
-                        NOMBRE:
-                    </label>
-                    <input type="text" name="nombre" placeholder="Tu nombre aquí" required>
+            <h2>
+                Productos seleccionados
+            </h2>
 
-                    <label>
-                        E-MAIL:
-                    </label>
-                    <input type="text" name="e-mail" placeholder="Tu E-mail aquí">
 
-                    <label>
-                        CONTRASEÑA:
-                    </label>
-                    <input type="text" name="contraseña" placeholder="Tu contraseña aquí">
+            <!--Agregar productos al carrito para javas-->
+            <div class="contenedor-carrito">
 
-                    <button type="submit"> ¡Hecho! </button>
+                <p class="carrito-vacio">
+                    Tu carrito está vacío.
+                </p>
 
-                </form>
+
+            </div>
+
+            <div class="resumen-carrito">
+
+                <h3>
+                    Resumen de compra
+                </h3>
+                <p>
+                    Total:
+                    <span class="total">
+                        $0
+                    </span>
+                </p>
+                <button class="btn-comprar">
+                    Finalizar compra
+                </button>
+
             </div>
 
         </section>
-
-
 
     </main>
 
@@ -106,6 +118,8 @@
         </div>
 
     </footer>
+
+    <script src="../script.js"></script>
 
 </body>
 
