@@ -10,3 +10,4 @@ boton.addEventListener("click", (hamburguesa) => {
     menu.classList.toggle("activo");
 
 })
+
